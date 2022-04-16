@@ -1,8 +1,10 @@
 module Tests
 
-open System
 open Xunit
 
+type Person = { name: string }
+
+let john = { name = "John" }
+
 [<Fact>]
-let ``My test`` () =
-    Assert.True(true)
+let ``My test`` () = Assert.Equal("John", john.name)
